@@ -12,14 +12,14 @@ module.exports = {
   networks: {
     development: {
       port: 7545,
-      network_id: "25777",
-      host: "127.0.0.1"
+      network_id: "15",
+      host: "192.168.126.131"
     },
     ganache_local: {
       provider: function(){
-        return new HDWalletProvider(process.env.MNEMONIC, "http://127.0.0.1:7545", accountIndex);
+        return new HDWalletProvider(process.env.MNEMONIC, "http://192.168.126.131:7545", accountIndex);
       },
-      network_id: "25777",
+      network_id: "15",
     }
   },
   compilers: {
