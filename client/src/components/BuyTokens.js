@@ -69,7 +69,7 @@ export default function BuyTokens(props) {
     const [myBalance, setBalance] = useState(0);
     const [buyTokenAmount, setBuyTokenAmount] = useState(10);
 
-    // useEffect hook for getting the balance of KRY tokens
+    // useEffect hook for getting the balance of GGB tokens
     useEffect(() => {
         getTokenBalance(props, setBalance);
     }, [props, setBalance]);
@@ -97,9 +97,9 @@ export default function BuyTokens(props) {
             <Paper className={classes.root} elevation={3}>
                 <Grid container spacing={2}>
                     <Grid item xs={12}>
-                        <h1 className={classes.title}>Buy Kryptonite Tokens</h1>
+                        <h1 className={classes.title}>Buy GoodGameBe Tokens</h1>
                         <h3 className={classes.title}>Contract address: {props.contractContext.kryptoniteTokenSaleAddress}</h3>
-                        <h3 className={classes.title}>My Balance: {myBalance} KRY</h3>
+                        <h3 className={classes.title}>My Balance: {myBalance} GGB</h3>
                     </Grid>
                     <Grid item xs={12}>
                         <TextField

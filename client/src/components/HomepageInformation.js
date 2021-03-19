@@ -11,13 +11,13 @@ export default function HomepageInformation() {
                 <Grid item xs={3}></Grid>
                 <Grid item xs={6}>
                     <h2 style={{ 'color': 'white', 'fontFamily': 'monospace', 'fontWeight': 'bold'}}>
-                        Obviously a fake stablecoin backed by <span style={{ color: "#18FF1E" }}>Kryptonite</span> mineral
+                        Obviously a fake stablecoin backed by <span style={{ color: "#18FF1E" }}>GoodGameBe</span> mineral
                     </h2>
                     <h2 style={{ 'color': 'white', 'fontFamily': 'monospace', 'fontWeight': 'lighter' }}>
-                        Each Kryptonite ERC-20 token is 1-to-1 pegged to the 1g of Kryptonite mineral
+                        Each GoodGameBe ERC-20 token is 1-to-1 pegged to the 1g of GoodGameBe mineral
                     </h2>
-                    <a href="https://en.wikipedia.org/wiki/Kryptonite">
-                        <img src="KryptoniteLogo.svg" alt="KryptoniteLogo" style={{ height: "160px", width: "160px" }} />
+                    <a href="https://en.wikipedia.org/wiki/GoodGameBe">
+                        <img src="GoodGameBeLogo.svg" alt="GoodGameBeLogo" style={{ height: "160px", width: "160px" }} />
                     </a>
                 </Grid>
                 <Grid item xs={3}></Grid>

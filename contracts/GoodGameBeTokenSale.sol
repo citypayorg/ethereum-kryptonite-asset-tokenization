@@ -4,7 +4,7 @@ pragma solidity ^0.6.0.;
 import "./Crowdsale.sol";
 import "./KYCContract.sol";
 
-contract KryptoniteTokenSale is Crowdsale {
+contract GoodGameBeTokenSale is Crowdsale {
     KYCContract kyc;
     
     constructor(uint256 rate, address payable wallet, IERC20 token, KYCContract _kyc) Crowdsale(rate, wallet, token) public {

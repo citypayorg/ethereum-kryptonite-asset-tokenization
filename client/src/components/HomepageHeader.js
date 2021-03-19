@@ -62,10 +62,10 @@ export default function Header() {
                     <Toolbar>
                         <Link to="/">
                             <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-                                <img src="../KryptoniteLogo.svg" alt="KryptoniteLogo" style={{ height: "60px", width: "60px" }} />
+                                <img src="../GoodGameBeLogo.svg" alt="GoodGameBeLogo" style={{ height: "60px", width: "60px" }} />
                             </IconButton>
                         </Link>
-                        <Typography variant="h6">Kryptonite Token</Typography>
+                        <Typography variant="h6">GoodGameBe Token</Typography>
                         <Button color="inherit" className={classes.right} onClick={statusPage}>Status</Button>
                         <Button color="inherit" className={classes.button} onClick={loginPage}>Login</Button>
                     </Toolbar>

@@ -1,10 +1,10 @@
 # Asset tokenization on Ethereum (ICO)
 
-## ERC-20 Kryptonite token
-This repository contains an `ERC-20 Kryptonite token` and crowdsale Dapp (`ICO`) for investing in tokens.
+## ERC-20 GoodGameBe token
+This repository contains an `ERC-20 GoodGameBe token` and crowdsale Dapp (`ICO`) for investing in tokens.
 
-ERC-20 Kryptonite token is obviously a fake stablecoin backed by Kryptonite mineral ✳️💎. Each Kryptonite ERC-20 token is 1-to-1 pegged to the 1g of Kryptonite mineral.
-For all Superman fans, the closest thing that we have in real life compared to Kryptonite is [Jadarite mineral discovered in Serbia](https://en.wikipedia.org/wiki/Jadarite).
+ERC-20 GoodGameBe token is obviously a fake stablecoin backed by GoodGameBe mineral ✳️💎. Each GoodGameBe ERC-20 token is 1-to-1 pegged to the 1g of GoodGameBe mineral.
+For all Superman fans, the closest thing that we have in real life compared to GoodGameBe is [Jadarite mineral discovered in Serbia](https://en.wikipedia.org/wiki/Jadarite).
 
 
 ## Introduction
@@ -26,7 +26,7 @@ Described Dapp is implemented with [ReactJS](https://reactjs.org/), with [Materi
 
    ![Admin Dashboard - KYC Approvac](./demo/KYC.gif)
 
-3. One the KYC process is completed, and investor's address has been whitelisted, ivestor will able to purchase the Kryptonite tokens either by directly sendign funds to the crowdsale cotract or from the web app.
+3. One the KYC process is completed, and investor's address has been whitelisted, ivestor will able to purchase the GoodGameBe tokens either by directly sendign funds to the crowdsale cotract or from the web app.
 
    ![Status Page - Buy Tokens](./demo/BuyTokens.gif)
 
@@ -35,8 +35,8 @@ In this repository you may find:
 - `truffle-config.js` file - contains solidity compiler version and different networks to migrate the contracts to.
 - `contracts` directory - contains smart contracts for Dapp: 
   1. `Crowdsale.sol` - Crowdsale contract from the OpenZeppelin.
-  2. `KryptoniteToken` - Contract extending ERC20 contract from the OpenZeppelin.
-  3. `KryptoniteTokenSale.sol` - Contract extending the Crowdsale contract.
+  2. `GoodGameBeToken` - Contract extending ERC20 contract from the OpenZeppelin.
+  3. `GoodGameBeTokenSale.sol` - Contract extending the Crowdsale contract.
   4. `KYCContract.sol` - KCY contract to store approved addresses.
   5. `Migrations.sol` - Migrations contract.
 - `test` directory - contains unit tests for the smart contracts.

@@ -14,8 +14,8 @@ const BN = web3.utils.BN;
 const expect = chai.expect;
 
 // Contracts for testing
-const KryptoniteToken = artifacts.require("./KryptoniteToken.sol");
-const KryptoniteTokenSale = artifacts.require("./KryptoniteTokenSale.sol");
+const GoodGameBeToken = artifacts.require("./GoodGameBeToken.sol");
+const GoodGameBeTokenSale = artifacts.require("./GoodGameBeTokenSale.sol");
 const KYCContract = artifacts.require("./KYCContract.sol");
 
 contract("KryptoToken: Initial supply test", async (accounts) => {
@@ -26,28 +26,28 @@ contract("KryptoToken: Initial supply test", async (accounts) => {
     const [ owner, recipient, anotherAccount ] = accounts;
 
     it("All tokens are transfered to the Crowdsale contract", async () => {
-        let instance = await KryptoniteToken.deployed();
+        let instance = await GoodGameBeToken.deployed();
         
         // Owner has transfered all the tokens
         expect(instance.balanceOf(owner)).to.eventually.be.a.bignumber.equal(new BN(0));
         
         // Tokens are now with the Crowdsale contract
-        let balanceOfKryptoniteTokenSale = await instance.balanceOf(KryptoniteTokenSale.address);
+        let balanceOfGoodGameBeTokenSale = await instance.balanceOf(GoodGameBeTokenSale.address);
         let totalSupply = await instance.totalSupply();
-        return expect(balanceOfKryptoniteTokenSale).to.be.a.bignumber.equal(totalSupply);
+        return expect(balanceOfGoodGameBeTokenSale).to.be.a.bignumber.equal(totalSupply);
     });
     
     it("Should be possible to buy tokens", async () => {
-        let instanceKryptoniteToken = await KryptoniteToken.deployed();
+        let instanceGoodGameBeToken = await GoodGameBeToken.deployed();
         let instanceKYC = await KYCContract.deployed(); 
-        let instanceKryptoniteTokenSale = await KryptoniteTokenSale.deployed();
+        let instanceGoodGameBeTokenSale = await GoodGameBeTokenSale.deployed();
 
         // Approve address through KYC so the user could buy
         instanceKYC.approveAddress(anotherAccount);
 
-        // Sent ether to KryptoniteTokenSale smart contract and receive tokens in return
-        balanceBefore = await instanceKryptoniteToken.balanceOf(anotherAccount);
-        expect(instanceKryptoniteTokenSale.sendTransaction({from: anotherAccount, value: web3.utils.toWei("1", "wei")})).to.be.fulfilled;
-        return expect(instanceKryptoniteToken.balanceOf(anotherAccount)).to.eventually.be.a.bignumber.equal(balanceBefore.add(new BN(1)));
+        // Sent ether to GoodGameBeTokenSale smart contract and receive tokens in return
+        balanceBefore = await instanceGoodGameBeToken.balanceOf(anotherAccount);
+        expect(instanceGoodGameBeTokenSale.sendTransaction({from: anotherAccount, value: web3.utils.toWei("1", "wei")})).to.be.fulfilled;
+        return expect(instanceGoodGameBeToken.balanceOf(anotherAccount)).to.eventually.be.a.bignumber.equal(balanceBefore.add(new BN(1)));
     });
 });

@@ -110,10 +110,10 @@ export default function LandingPageForm(props) {
                 <Paper className={classes.root} elevation={3}>
                     <Grid container spacing={2}>
                         <Grid item xs={12}>
-                            <h1 className={classes.title}>Sign Up to buy Kryptonite!</h1>
+                            <h1 className={classes.title}>Sign Up to buy GoodGameBe!</h1>
                             <div className={classes.text}>
                                 In order to buy tokens you must first go through KYC process. Once you have been approved (whitelisted)
-                                you will be able to buy Kryptonite tokens. Please check on the status page your KYC process.
+                                you will be able to buy GoodGameBe tokens. Please check on the status page your KYC process.
                         </div>
                         </Grid>
                         <Grid item xs={12}>

@@ -70,7 +70,7 @@ export default function KYCStatus(props) {
         setAddress(event.target.value);
     }
 
-    // Interracting with KryptoniteTokenSale smart contract.
+    // Interracting with GoodGameBeTokenSale smart contract.
     // Checking if the specified address has been whitelisted and displaying appropriate message for that.
     // If the KYC process is completed allowing used in the parent container component to buy tokens.
     async function verifyAddress(event) {
@@ -90,7 +90,7 @@ export default function KYCStatus(props) {
         // Updating the states
         setIsKycCompleted(isKycCompleted);
         if (isKycCompleted) {
-            setStatusMessage("You address has been whitelisted. You can buy KRY toneks now.");
+            setStatusMessage("You address has been whitelisted. You can buy GGB toneks now.");
         }
         else {
             setStatusMessage("You address hasn't been whitelisted yet. Please have patience while your request is being processed.");

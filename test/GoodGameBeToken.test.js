@@ -14,7 +14,7 @@ const BN = web3.utils.BN;
 const expect = chai.expect;
 
  // Contract for testing
- const KryptoniteToken = artifacts.require("./KryptoniteToken.sol");
+ const GoodGameBeToken = artifacts.require("./GoodGameBeToken.sol");
 
 
 contract("KryptoToken: Initial supply test", async (accounts) => {
@@ -24,11 +24,11 @@ contract("KryptoToken: Initial supply test", async (accounts) => {
     // Contract deployment is detached from the migration
     // (We can test the contract standalone, without crowdsale contract) 
     beforeEach(async () => {
-        this.KryptoniteToken = await KryptoniteToken.new(process.env.INITIAL_TOKEN_SUPPLY);
+        this.GoodGameBeToken = await GoodGameBeToken.new(process.env.INITIAL_TOKEN_SUPPLY);
     });
 
     it("Total initial supply of tokens should be in owner's account", async () =>{
-        let instance = this.KryptoniteToken;
+        let instance = this.GoodGameBeToken;
         let totalSupply = await instance.totalSupply();
 
         // Initial supple is with owner/deployer of contract
@@ -36,7 +36,7 @@ contract("KryptoToken: Initial supply test", async (accounts) => {
     });
 
     it("Sending tokens from one account another", async () => {
-        let instance = this.KryptoniteToken;
+        let instance = this.GoodGameBeToken;
         let totalSupply = await instance.totalSupply();
         let tokensToSend = 99;
 
@@ -52,7 +52,7 @@ contract("KryptoToken: Initial supply test", async (accounts) => {
     });
 
     it("Not possible to transfer more than total number of issued tokens", async () => {
-        let instance = this.KryptoniteToken;
+        let instance = this.GoodGameBeToken;
         let totalSupply = await instance.totalSupply();
         let tokensToSend = totalSupply.add(new BN(9999));
 

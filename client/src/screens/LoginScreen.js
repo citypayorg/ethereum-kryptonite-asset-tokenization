@@ -91,11 +91,11 @@ export default function LoginScreen() {
                     <Paper className={classes.root} elevation={3}>
                         <Grid container spacing={2}>
                             <Grid item xs={12}>
-                                <a href="https://en.wikipedia.org/wiki/Kryptonite">
-                                    <img src="KryptoniteLogo.svg" alt="KryptoniteLogo" style={{ height: "160px", width: "160px" }} />
+                                <a href="https://en.wikipedia.org/wiki/GoodGameBe">
+                                    <img src="GoodGameBeLogo.svg" alt="GoodGameBeLogo" style={{ height: "160px", width: "160px" }} />
                                 </a>
                                 <div className={classes.subtitle}>
-                                    ERC-20 token backed by <span style={{ color: "#18FF1E" }}>Kryptonite</span> mineral
+                                    ERC-20 token backed by <span style={{ color: "#18FF1E" }}>GoodGameBe</span> mineral
                             </div>
                             </Grid>
                             <Grid item xs={12}>

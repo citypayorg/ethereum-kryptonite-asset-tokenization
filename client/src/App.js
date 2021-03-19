@@ -2,8 +2,8 @@
 import React, { Component } from "react";
 
 // Ethereum contracts
-import KryptoniteToken from "./contracts/KryptoniteToken.json";
-import KryptoniteTokenSale from "./contracts/KryptoniteTokenSale.json";
+import GoodGameBeToken from "./contracts/GoodGameBeToken.json";
+import GoodGameBeTokenSale from "./contracts/GoodGameBeTokenSale.json";
 import KYCContract from "./contracts/KYCContract.json";
 import getWeb3 from "./getWeb3";
 
@@ -42,13 +42,13 @@ class App extends Component {
       this.networkId = await this.web3.eth.net.getId();
 
       this.kryptoniteToken = new this.web3.eth.Contract(
-        KryptoniteToken.abi,
-        KryptoniteToken.networks[this.networkId] && KryptoniteToken.networks[this.networkId].address
+        GoodGameBeToken.abi,
+        GoodGameBeToken.networks[this.networkId] && GoodGameBeToken.networks[this.networkId].address
       );
 
       this.kryptoniteTokenSale = new this.web3.eth.Contract(
-        KryptoniteTokenSale.abi,
-        KryptoniteTokenSale.networks[this.networkId] && KryptoniteTokenSale.networks[this.networkId].address
+        GoodGameBeTokenSale.abi,
+        GoodGameBeTokenSale.networks[this.networkId] && GoodGameBeTokenSale.networks[this.networkId].address
       );
 
       this.kycContract = new this.web3.eth.Contract(
@@ -63,7 +63,7 @@ class App extends Component {
         contractContext: {
           kryptoniteToken: this.kryptoniteToken,
           kryptoniteTokenSale: this.kryptoniteTokenSale,
-          kryptoniteTokenSaleAddress: KryptoniteTokenSale.networks[this.networkId].address,
+          kryptoniteTokenSaleAddress: GoodGameBeTokenSale.networks[this.networkId].address,
           kycContract: this.kycContract,
           web3: this.web3,
           accounts: this.accounts
