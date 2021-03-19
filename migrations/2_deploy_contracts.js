@@ -4,7 +4,7 @@ require("dotenv").config({"path": "../.env"});
 
 var GoodGameBeToken = artifacts.require("./GoodGameBeToken.sol");
 var GoodGameBeTokenSale = artifacts.require("./GoodGameBeTokenSale.sol"); 
-var KYC = artifacts.require("./KYCContract.sol");
+var GGB = artifacts.require("./GGBContract.sol");
 
 module.exports = async function (deployer) {
     let tokenSupply = process.env.INITIAL_TOKEN_SUPPLY;
@@ -13,11 +13,11 @@ module.exports = async function (deployer) {
     // Creating/minting new ERC-20 token with given initial supply
     await deployer.deploy(GoodGameBeToken, tokenSupply);
 
-    // Creating KYC contract
-    await deployer.deploy(KYC);
+    // Creating GGB contract
+    await deployer.deploy(GGB);
 
     // Creating crowdsale contract
-    await deployer.deploy(GoodGameBeTokenSale, 1, address[0], GoodGameBeToken.address, KYC.address);
+    await deployer.deploy(GoodGameBeTokenSale, 1, address[0], GoodGameBeToken.address, GGB.address);
     
     // Transfering the ownership of tokens to the crowdsale contract
     let instance = await GoodGameBeToken.deployed();

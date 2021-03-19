@@ -16,7 +16,7 @@ const expect = chai.expect;
 // Contracts for testing
 const GoodGameBeToken = artifacts.require("./GoodGameBeToken.sol");
 const GoodGameBeTokenSale = artifacts.require("./GoodGameBeTokenSale.sol");
-const KYCContract = artifacts.require("./KYCContract.sol");
+const GGBContract = artifacts.require("./GGBContract.sol");
 
 contract("KryptoToken: Initial supply test", async (accounts) => {
     /**
@@ -39,10 +39,10 @@ contract("KryptoToken: Initial supply test", async (accounts) => {
     
     it("Should be possible to buy tokens", async () => {
         let instanceGoodGameBeToken = await GoodGameBeToken.deployed();
-        let instanceKYC = await KYCContract.deployed(); 
+        let instanceKYC = await GGBContract.deployed(); 
         let instanceGoodGameBeTokenSale = await GoodGameBeTokenSale.deployed();
 
-        // Approve address through KYC so the user could buy
+        // Approve address through GGB so the user could buy
         instanceKYC.approveAddress(anotherAccount);
 
         // Sent ether to GoodGameBeTokenSale smart contract and receive tokens in return

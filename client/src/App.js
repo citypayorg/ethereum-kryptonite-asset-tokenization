@@ -4,7 +4,7 @@ import React, { Component } from "react";
 // Ethereum contracts
 import GoodGameBeToken from "./contracts/GoodGameBeToken.json";
 import GoodGameBeTokenSale from "./contracts/GoodGameBeTokenSale.json";
-import KYCContract from "./contracts/KYCContract.json";
+import GGBContract from "./contracts/GGBContract.json";
 import getWeb3 from "./getWeb3";
 
 // Local ReactJs components
@@ -52,8 +52,8 @@ class App extends Component {
       );
 
       this.kycContract = new this.web3.eth.Contract(
-        KYCContract.abi,
-        KYCContract.networks[this.networkId] && KYCContract.networks[this.networkId].address
+        GGBContract.abi,
+        GGBContract.networks[this.networkId] && GGBContract.networks[this.networkId].address
       );
 
       // Loading is finished.

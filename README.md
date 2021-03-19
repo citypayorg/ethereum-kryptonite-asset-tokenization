@@ -37,7 +37,7 @@ In this repository you may find:
   1. `Crowdsale.sol` - Crowdsale contract from the OpenZeppelin.
   2. `GoodGameBeToken` - Contract extending ERC20 contract from the OpenZeppelin.
   3. `GoodGameBeTokenSale.sol` - Contract extending the Crowdsale contract.
-  4. `KYCContract.sol` - KCY contract to store approved addresses.
+  4. `GGBContract.sol` - KCY contract to store approved addresses.
   5. `Migrations.sol` - Migrations contract.
 - `test` directory - contains unit tests for the smart contracts.
 - `migrations` directory - contains migration files for smart contracts.

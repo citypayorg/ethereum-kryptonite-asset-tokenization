@@ -82,7 +82,7 @@ export default function RequestsTable(props) {
 
     async function approveOrDisapproveAddress(address, isKycCompleted) {
         /**
-         * Interacting with smart contract - Approving KYC for specified address.
+         * Interacting with smart contract - Approving GGB for specified address.
          */
         if (isKycCompleted) {
             await props.contractContext.kycContract.methods.approveAddress(address).send({
@@ -101,15 +101,15 @@ export default function RequestsTable(props) {
          * Function that handles the user action and updates the kyc status. 
          */
 
-        // Change the KYC flaf
+        // Change the GGB flaf
         let request = props.requests[requestId];
         request.kyc = !request.kyc;
 
-        // Saving address KYC status in smart contract
+        // Saving address GGB status in smart contract
         try {
             await approveOrDisapproveAddress(request.address, request.kyc)
         } catch (error) {
-            alert('Only onwer of the KYC smart contract can approve or revoke access');
+            alert('Only onwer of the GGB smart contract can approve or revoke access');
             return;
         }
 
@@ -126,7 +126,7 @@ export default function RequestsTable(props) {
 
     return (
         <Container className={classes.container} >
-            <h1 className={classes.title}>Approve/Dissaprove requests (KYC):</h1>
+            <h1 className={classes.title}>Approve/Dissaprove requests (GGB):</h1>
             <TableContainer component={Paper} className={classes.tableContainer}>
                 <h4 align="left">&nbsp;&nbsp;&nbsp;{props.title}</h4>
                 <Table className={classes.table} size="small" aria-label="simple table">
@@ -136,7 +136,7 @@ export default function RequestsTable(props) {
                             <TableCell className={classes.text} align="right" style={{ 'fontWeight': 'bold' }}>Name</TableCell>
                             <TableCell className={classes.text} align="right" style={{ 'fontWeight': 'bold' }}>Surname</TableCell>
                             <TableCell className={classes.text} align="right" style={{ 'fontWeight': 'bold' }}>Email</TableCell>
-                            <TableCell className={classes.text} align="right" style={{ 'fontWeight': 'bold' }}>KYC completed</TableCell>
+                            <TableCell className={classes.text} align="right" style={{ 'fontWeight': 'bold' }}>GGB completed</TableCell>
                             <TableCell className={classes.text} align="center" style={{ 'fontWeight': 'bold' }}>Action</TableCell>
                         </TableRow>
                     </TableHead>

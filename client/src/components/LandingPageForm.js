@@ -87,9 +87,9 @@ export default function LandingPageForm(props) {
         }
         requestsRef.push(request);
 
-        alert('You have successfully registered! Please wait until KYC is completed. You may check the porgress on status page.');
+        alert('You have successfully registered! Please wait until GGB is completed. You may check the porgress on status page.');
 
-        // If signup has been successful it it redirrecting user to status page to check his/her KYC status.
+        // If signup has been successful it it redirrecting user to status page to check his/her GGB status.
         setRedirectPage(
             <Redirect
                 push
@@ -112,8 +112,8 @@ export default function LandingPageForm(props) {
                         <Grid item xs={12}>
                             <h1 className={classes.title}>Sign Up to buy GoodGameBe!</h1>
                             <div className={classes.text}>
-                                In order to buy tokens you must first go through KYC process. Once you have been approved (whitelisted)
-                                you will be able to buy GoodGameBe tokens. Please check on the status page your KYC process.
+                                In order to buy tokens you must first go through GGB process. Once you have been approved (whitelisted)
+                                you will be able to buy GoodGameBe tokens. Please check on the status page your GGB process.
                         </div>
                         </Grid>
                         <Grid item xs={12}>

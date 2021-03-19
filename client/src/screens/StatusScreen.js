@@ -13,7 +13,7 @@ export default function StatusScreen(props) {
     const [isKycCompleted, setIsKycCompleted] = useState(false);
 
     // If user has been automatically redirected to this page right after signing up (from Langing Page)
-    // Automatically populate address field, with the address he/she provided, on the status page, for KYC check.
+    // Automatically populate address field, with the address he/she provided, on the status page, for GGB check.
     let addressLandingPage = null
     if(props.location && props.location.state){
         addressLandingPage = props.location.state.address;

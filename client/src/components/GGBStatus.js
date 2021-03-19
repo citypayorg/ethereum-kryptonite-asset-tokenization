@@ -72,7 +72,7 @@ export default function KYCStatus(props) {
 
     // Interracting with GoodGameBeTokenSale smart contract.
     // Checking if the specified address has been whitelisted and displaying appropriate message for that.
-    // If the KYC process is completed allowing used in the parent container component to buy tokens.
+    // If the GGB process is completed allowing used in the parent container component to buy tokens.
     async function verifyAddress(event) {
         event.preventDefault();
 
@@ -104,7 +104,7 @@ export default function KYCStatus(props) {
         <Container className={classes.container} >
             <Grid container spacing={2}>
                 <Grid item xs={12}>
-                    <h1 className={classes.title}>Verify KYC process</h1>
+                    <h1 className={classes.title}>Verify GGB process</h1>
                     <div className={classes.text}>
                         Specify the wallet address to check if your address has been whitelisted.
                         </div>

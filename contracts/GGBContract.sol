@@ -3,7 +3,7 @@ pragma solidity ^0.6.0.;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract KYCContract is Ownable{
+contract GGBContract is Ownable{
     mapping(address => bool) approved;
 
     function approveAddress(address _address) public {
