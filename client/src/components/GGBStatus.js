@@ -52,7 +52,7 @@ const useStyles = makeStyles({
     }
 });
 
-export default function KYCStatus(props) {
+export default function GGBStatus(props) {
     // Address that will be initially displayed in the text field.
     // Checking if the user has been redirected from the Landing Page form and if so, populate text field with specified address.
     let addressPlaceholder = "0x1234...";

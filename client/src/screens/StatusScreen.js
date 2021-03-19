@@ -4,7 +4,7 @@ import React, { useState } from "react";
 // Local ReactJs components
 import HomepageHeader from "../components/HomepageHeader";
 import BuyTokens from "../components/BuyTokens";
-import KYCStatus from "../components/KYCStatus";
+import GGBStatus from "../components/GGBStatus";
 
 // Contract context
 import ContractContex from "../context/ContractContex"
@@ -24,7 +24,7 @@ export default function StatusScreen(props) {
             {web3 => (
                 <div>
                     <HomepageHeader />
-                    <KYCStatus contractContext={web3} tokenPurchaseEnabled={setIsKycCompleted} address={addressLandingPage}/>
+                    <GGBStatus contractContext={web3} tokenPurchaseEnabled={setIsKycCompleted} address={addressLandingPage}/>
                     {isKycCompleted && <BuyTokens contractContext={web3}/>}
                 </div>
             )}

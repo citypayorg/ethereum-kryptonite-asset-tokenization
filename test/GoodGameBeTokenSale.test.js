@@ -39,11 +39,11 @@ contract("KryptoToken: Initial supply test", async (accounts) => {
     
     it("Should be possible to buy tokens", async () => {
         let instanceGoodGameBeToken = await GoodGameBeToken.deployed();
-        let instanceKYC = await GGBContract.deployed(); 
+        let instanceGGB = await GGBContract.deployed(); 
         let instanceGoodGameBeTokenSale = await GoodGameBeTokenSale.deployed();
 
         // Approve address through GGB so the user could buy
-        instanceKYC.approveAddress(anotherAccount);
+        instanceGGB.approveAddress(anotherAccount);
 
         // Sent ether to GoodGameBeTokenSale smart contract and receive tokens in return
         balanceBefore = await instanceGoodGameBeToken.balanceOf(anotherAccount);
