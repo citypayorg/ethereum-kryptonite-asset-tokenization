@@ -62,12 +62,12 @@ function createRows(requests, classes, approveOrDisapproveRequest) {
                 <TableCell className={classes.text} align="right">{requests[key].firstName}</TableCell>
                 <TableCell className={classes.text} align="right">{requests[key].lastName}</TableCell>
                 <TableCell className={classes.text} align="right">{requests[key].email}</TableCell>
-                <TableCell className={classes.text} align="center">{requests[key].kyc ? "Yes" : "No"}</TableCell>
+                <TableCell className={classes.text} align="center">{requests[key].ggb ? "Yes" : "No"}</TableCell>
                 <TableCell className={classes.text} align="right">
                     <IconButton color="primary" aria-label="add to shopping cart" size="small" onClick={(event) => approveOrDisapproveRequest(event, key)}>
-                        {requests[key].kyc ? <p style={{ color: red[500] }} >Disapprove</p> : <p style={{ color: green[500] }} >Approve</p>}
+                        {requests[key].ggb ? <p style={{ color: red[500] }} >Disapprove</p> : <p style={{ color: green[500] }} >Approve</p>}
                         &nbsp;
-                        {requests[key].kyc ? <CancelIcon color="secondary" /> : <VerifiedUserIcon style={{ color: green[500] }} />}
+                        {requests[key].ggb ? <CancelIcon color="secondary" /> : <VerifiedUserIcon style={{ color: green[500] }} />}
                     </IconButton>
                 </TableCell>
             </ TableRow>
@@ -98,16 +98,16 @@ export default function RequestsTable(props) {
 
     const approveOrDisapproveRequest = async (event, requestId) => {
         /**
-         * Function that handles the user action and updates the kyc status. 
+         * Function that handles the user action and updates the ggb status. 
          */
 
         // Change the GGB flaf
         let request = props.requests[requestId];
-        request.kyc = !request.kyc;
+        request.ggb = !request.ggb;
 
         // Saving address GGB status in smart contract
         try {
-            await approveOrDisapproveAddress(request.address, request.kyc)
+            await approveOrDisapproveAddress(request.address, request.ggb)
         } catch (error) {
             alert('Only onwer of the GGB smart contract can approve or revoke access');
             return;
@@ -116,9 +116,9 @@ export default function RequestsTable(props) {
         // Save record to the database
         const requessRef = app.database().ref('requests').child(requestId);
         await requessRef.update({
-            kyc: request.kyc
+            ggb: request.ggb
         });
-        request.kyc ? alert("Successfully approved the request!") : alert("Revoked the request!");
+        request.ggb ? alert("Successfully approved the request!") : alert("Revoked the request!");
 
     }
 

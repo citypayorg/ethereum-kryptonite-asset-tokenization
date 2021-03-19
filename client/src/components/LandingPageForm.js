@@ -83,7 +83,7 @@ export default function LandingPageForm(props) {
             lastName: lastName,
             email: email,
             address: address,
-            kyc: false
+            ggb: false
         }
         requestsRef.push(request);
 
