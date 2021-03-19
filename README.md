@@ -8,7 +8,7 @@ For all Superman fans, the closest thing that we have in real life compared to G
 
 
 ## Introduction
-In order to invest in ICO, investor must first register on the landing page, after which they will have to go through the KYC and AML process. Once KYC is completed and their address has been whitelisted, they can invest in the ICO by purchasing the tokens, either on the web app of by dirrecly sending the funds to the crowdsale smart contract address. In the meantime, they may check the KYC process on the status page, until admins whitelist them from the admin page.
+In order to invest in ICO, investor must first register on the landing page, after which they will have to go through the GGB and AML process. Once GGB is completed and their address has been whitelisted, they can invest in the ICO by purchasing the tokens, either on the web app of by dirrecly sending the funds to the crowdsale smart contract address. In the meantime, they may check the GGB process on the status page, until admins whitelist them from the admin page.
 
 Described Dapp is implemented with [ReactJS](https://reactjs.org/), with [Material-UI](https://material-ui.com/) on top. For working with ethereum blockchain, [Truffle](https://www.trufflesuite.com/truffle) was used with [React Truffle Box](https://www.trufflesuite.com/boxes/react) boilerplate and [MetaMask](https://metamask.io/) for interacting with Dapp. [OppenZeppelin](https://openzeppelin.com/contracts/) was used as a reference for smart conract implementation and [Firebase](https://firebase.google.com/) for hosting the database.
 
@@ -16,17 +16,17 @@ Described Dapp is implemented with [ReactJS](https://reactjs.org/), with [Materi
 
 1. Investor registers for the ICO on the Landing Page by specifying necessary details, including his/her address which will be used to transfer the funds to invest in the tokens. 
 
-   He/she is redirected on the Status page, where they can check the KYC process. Once the process is completed, they would be able to purchase the tokens.
+   He/she is redirected on the Status page, where they can check the GGB process. Once the process is completed, they would be able to purchase the tokens.
 
    ![Landing Page - Signup](./demo/Signup.gif)
 
-2. After that the token issuance team will go through KYC/AML process for each investor request and and approve/disapprove investors to participate in crowdsale.
+2. After that the token issuance team will go through GGB/AML process for each investor request and and approve/disapprove investors to participate in crowdsale.
 
-   From Admin Dashboard they will whitelist/revoke investor addresses on the KYC contract. Crowdsale contract communicates with KYC contract to know which addresses are approved to purchase the tokens.
+   From Admin Dashboard they will whitelist/revoke investor addresses on the GGB contract. Crowdsale contract communicates with GGB contract to know which addresses are approved to purchase the tokens.
 
-   ![Admin Dashboard - KYC Approvac](./demo/KYC.gif)
+   ![Admin Dashboard - GGB Approvac](./demo/GGB.gif)
 
-3. One the KYC process is completed, and investor's address has been whitelisted, ivestor will able to purchase the GoodGameBe tokens either by directly sendign funds to the crowdsale cotract or from the web app.
+3. One the GGB process is completed, and investor's address has been whitelisted, ivestor will able to purchase the GoodGameBe tokens either by directly sendign funds to the crowdsale cotract or from the web app.
 
    ![Status Page - Buy Tokens](./demo/BuyTokens.gif)
 
