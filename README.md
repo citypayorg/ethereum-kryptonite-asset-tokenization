@@ -37,7 +37,7 @@ In this repository you may find:
   1. `Crowdsale.sol` - Crowdsale contract from the OpenZeppelin.
   2. `GoodGameBeToken` - Contract extending ERC20 contract from the OpenZeppelin.
   3. `GoodGameBeTokenSale.sol` - Contract extending the Crowdsale contract.
-  4. `GGBContract.sol` - KCY contract to store approved addresses.
+  4. `GGBContract.sol` - GGB contract to store approved addresses.
   5. `Migrations.sol` - Migrations contract.
 - `test` directory - contains unit tests for the smart contracts.
 - `migrations` directory - contains migration files for smart contracts.
@@ -56,10 +56,20 @@ Setting up and running the application :
   2. `cd client` & `npm install` (for ReactJS app)
 - Start `Ganache` and update truffle-config file if necessary with the network parameters.
 - Compile and migrate smart contracts to the local blockchain (from truffle console): `truffle migrate --network "development/ganache-local" --reset`.
+- when error In the root directory: truffle migrate
 - Start react app: `cd client` & `npm start`.
 
 To test the smart contracts:
 - In the root directory: `truffle test`.
 
 
+https://www.edureka.co/blog/ethereum-smart-contract-project
 
+/home/dev/ggbico/client/src/App.js - 66 line
+   kryptoniteTokenSaleAddress: GoodGameBeTokenSale.networks[this.networkId].address,
+/home/dev/ggbico/client/src/contracts/GoodGameBeToken.json
+   0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925
+   0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+955 line 
+      "address": "0xa53d0D74B832a71B74F8dBC29fa148f94ef18C74",
+      "transactionHash": "0xd9db1b0ed50b734189ded9927ba35522ea8b03c96025c492f2e762ea78eedbd6"

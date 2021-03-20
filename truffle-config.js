@@ -13,7 +13,9 @@ module.exports = {
     development: {
       port: 7545,
       network_id: "15",
-      host: "192.168.126.131"
+      host: "192.168.126.131",
+      from: "0x74ed3feb26e2331ed5d51fcc29911591ff57b30e", //
+      gas: 2000000
     },
     ganache_local: {
       provider: function(){
