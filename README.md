@@ -54,16 +54,26 @@ Setting up and running the application :
 - Install npm moduls: 
   1. `npm install` in the root directory (for truffle and unit tests)
   2. `cd client` & `npm install` (for ReactJS app)
+#####  sudo npm install -g ganache-cli #####
 - Start `Ganache` and update truffle-config file if necessary with the network parameters.
 - Compile and migrate smart contracts to the local blockchain (from truffle console): `truffle migrate --network "development/ganache-local" --reset`.
+truffle migrate --networks "development/ganache-local" --reset
 - when error In the root directory: truffle migrate
 - Start react app: `cd client` & `npm start`.
 
 To test the smart contracts:
+   personal.unlockAccount(eth.accounts[1], "####password####", 0)  --> ETH 
 - In the root directory: `truffle test`.
-
+truffle test --show-events
+truffle test --network development
 
 https://www.edureka.co/blog/ethereum-smart-contract-project
+truffle console
+var first_contract
+HelloWorld.deployed().then(function(instance) { first_contract = instance; })
+dApp.message.call()
+
+
 
 /home/dev/ggbico/client/src/App.js - 66 line
    kryptoniteTokenSaleAddress: GoodGameBeTokenSale.networks[this.networkId].address,
